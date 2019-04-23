@@ -7,6 +7,8 @@ import org.umssdiplo.automationv01.core.utils.PropertyAccessor;
 
 public final class AdidasHeaderPage {
     public static AdidasHeader loginPage() {
+        ManageDriver.getInstance().getWebDriver()
+                .navigate().to(PropertyAccessor.getInstance().getBaseUrl());
         return new AdidasHeader();
     }
 }
